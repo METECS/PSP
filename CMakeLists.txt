@@ -1,3 +1,5 @@
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../psp/cmake/Modules" ${CMAKE_MODULE_PATH})
+
 project(CFEPSP C)
 
 if (NOT CFE_SYSTEM_PSPNAME)

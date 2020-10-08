@@ -37,7 +37,7 @@ set(CMAKE_CXX_CREATE_SHARED_LIBRARY ${CMAKE_C_CREATE_SHARED_MODULE})
 # Then run "rtems-syms" and re-link the output into a final executable
 set(CMAKE_C_LINK_EXECUTABLE
     "<CMAKE_C_COMPILER> <FLAGS> -o <TARGET>-prelink <OBJECTS> <CMAKE_C_LINK_FLAGS> <LINK_FLAGS> <LINK_LIBRARIES>"
-    "${RTEMS_TOOLS_PREFIX}/bin/rtems-syms -v -e -c ${RTEMS_BSP_C_FLAGS} -C <CMAKE_C_COMPILER> -o <TARGET>-dl-sym.o <TARGET>-prelink"
+    "${RTEMS_TOOLS_PREFIX}/bin/rtems-syms -v -e -C <CMAKE_C_COMPILER> -o <TARGET>-dl-sym.o <TARGET>-prelink"
     "<CMAKE_C_COMPILER> <FLAGS> -o <TARGET> <TARGET>-dl-sym.o <OBJECTS> <CMAKE_C_LINK_FLAGS> <LINK_FLAGS> <LINK_LIBRARIES>")
 
 set(RTEMS_TARGET_PATH 
